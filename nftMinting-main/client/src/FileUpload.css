@@ -1,0 +1,64 @@
+.img-ctr {
+  padding-right: 30px;
+}
+
+.transaction {
+  margin-bottom: 15px;
+}
+
+.transaction-link {
+  color: #22C1C3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.transaction-link:hover {
+  color: #3BB2B8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-label {
+  background-color: #22C1C3;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+  background-color: #3BB2B8;
+}
+
+.input-file {
+  display: none;
+}
+
+.button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #F082AC;
+}
+
+.file-name {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
