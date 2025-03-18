@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NFT Minter</h1>
+      <h1>NFT MINTER</h1>
       <div className="container">
         <FileUpload addMintedImage={addMintedImage} />
       </div>
