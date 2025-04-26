@@ -5,6 +5,15 @@ const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 5000;
 
+// Enable CORS for all routes
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? 'https://nft-minter-client.onrender.com' 
+    : 'http://localhost:5173',
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Configure multer for file uploads
@@ -23,7 +32,7 @@ const starton = axios.create({
 });
 
 // Endpoint to handle file uploads
-app.post('/upload', cors(), upload.single('file'), async (req, res) => {
+app.post('/upload', upload.single('file'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: 'No file uploaded' });

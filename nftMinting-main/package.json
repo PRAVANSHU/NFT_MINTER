@@ -1,0 +1,17 @@
+{
+  "name": "nft-minter",
+  "version": "1.0.0",
+  "description": "NFT Minting Application",
+  "scripts": {
+    "install-api": "cd api && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-api && npm run install-client",
+    "start-api": "cd api && npm start",
+    "start-client": "cd client && npm run dev",
+    "build-client": "cd client && npm run build",
+    "start": "npm run start-api"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

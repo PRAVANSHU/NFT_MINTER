@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: nft-minter-api
+    env: node
+    buildCommand: cd api && npm install
+    startCommand: cd api && npm start
+    envVars:
+      - key: PORT
+        value: 10000
+  
+  - type: web
+    name: nft-minter-client
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://nft-minter-api.onrender.com 
